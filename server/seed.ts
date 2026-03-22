@@ -1,0 +1,330 @@
+import { db } from "./db";
+import { members, news, documents, services } from "@shared/schema";
+import { sql } from "drizzle-orm";
+
+export async function seed() {
+  const existing = await db.select({ count: sql<number>`count(*)` }).from(members);
+  if (Number(existing[0].count) > 0) {
+    console.log("Database already seeded, skipping...");
+    return;
+  }
+
+  console.log("Seeding database...");
+
+  await db.insert(members).values([
+    {
+      name: "Mohamed Al Howaidi Nasralla",
+      role: "Portavoz",
+      organ: "junta",
+      center: null,
+      email: "portavoz@consell.uji.es",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80",
+      bio: "Nuestra misión es garantizar que ninguna voz se pierda en la burocracia universitaria. Trabajamos por una UJI más inclusiva, transparente y reivindicativa.",
+      order: 1,
+    },
+    {
+      name: "Viceportavocía",
+      role: "Viceportavocía",
+      organ: "junta",
+      email: "vice@consell.uji.es",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80",
+      order: 2,
+    },
+    {
+      name: "Secretaría",
+      role: "Secretaría",
+      organ: "junta",
+      email: "secre@consell.uji.es",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80",
+      order: 3,
+    },
+    {
+      name: "Tesorería",
+      role: "Tesorería",
+      organ: "junta",
+      email: "tesoreria@consell.uji.es",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80",
+      order: 4,
+    },
+  ]);
+
+  await db.insert(news).values([
+    {
+      title: "La UJI aprueba el nuevo calendario académico con las reivindicaciones del Consell",
+      excerpt: "El Consell de l'Estudiantat logra incluir las principales demandas estudiantiles en el calendario del próximo curso.",
+      content: "El Consell de l'Estudiantat ha logrado que la Universitat Jaume I incluya las principales demandas estudiantiles en el calendario académico del próximo curso.",
+      image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80",
+      category: "Institucional",
+      author: "Redacción Consell",
+      featured: true,
+      publishedAt: new Date("2026-02-18"),
+    },
+    {
+      title: "El Consell reclama mejoras en el transporte público al campus",
+      excerpt: "Iniciativa para mejorar las frecuencias y tarifas del transporte público universitario.",
+      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80",
+      category: "Institucional",
+      author: "Junta Permanente",
+      featured: false,
+      publishedAt: new Date("2026-02-17"),
+    },
+    {
+      title: "Abiertas las inscripciones para el Torneo de Debate 2026",
+      excerpt: "Demuestra tus habilidades de oratoria y argumentación. El tema de este año girará en torno a la inteligencia artificial en la educación superior.",
+      image: "https://images.unsplash.com/photo-1475721027767-4d06cdd74377?auto=format&fit=crop&q=80",
+      category: "Cultura",
+      author: "Comisión de Dinamización",
+      featured: false,
+      publishedAt: new Date("2026-02-16"),
+    },
+    {
+      title: "Torneo de Debate UJI 2026: Inscripciones abiertas",
+      excerpt: "Participa en el torneo de debate más importante del campus.",
+      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80",
+      category: "Cultura",
+      author: "Comisión de Dinamización",
+      featured: false,
+      publishedAt: new Date("2026-02-15"),
+    },
+    {
+      title: "Nueva línea de ayudas para transporte comarcal",
+      excerpt: "El Consell logra un acuerdo con la Generalitat para subvencionar el 50% del abono transporte para estudiantes residentes en comarcas del interior.",
+      image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80",
+      category: "Institucional",
+      author: "Junta Permanente",
+      featured: false,
+      publishedAt: new Date("2026-02-14"),
+    },
+    {
+      title: "Recogida solidaria de alimentos este jueves",
+      excerpt: "Campaña de solidaridad organizada por el voluntariado universitario.",
+      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80",
+      category: "Voluntariado",
+      author: "Comisión Social",
+      featured: false,
+      publishedAt: new Date("2026-02-12"),
+    },
+    {
+      title: "Resumen de la Asamblea General de Estudiantes",
+      excerpt: "Consulta los puntos tratados y las votaciones realizadas en la última asamblea. La participación estudiantil marca un nuevo récord histórico.",
+      image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&q=80",
+      category: "Institucional",
+      author: "Secretaría",
+      featured: false,
+      publishedAt: new Date("2026-02-10"),
+    },
+    {
+      title: "Agenda Cultural de Primavera: Conciertos y Teatro",
+      excerpt: "Descubre la programación completa para los próximos meses. Descuentos exclusivos para el estudiantado en el Paranimf.",
+      image: "https://images.unsplash.com/photo-1514525253440-b393452e2729?auto=format&fit=crop&q=80",
+      category: "Cultura",
+      author: "Aula de Cultura",
+      featured: false,
+      publishedAt: new Date("2026-02-05"),
+    },
+  ]);
+
+  await db.insert(documents).values([
+    {
+      title: "Acta Pleno Ordinario Febrero 2026",
+      description: "Acta completa del pleno ordinario celebrado en febrero de 2026",
+      type: "acta",
+      category: "Pleno",
+      fileSize: "2.4 MB",
+      publishedAt: new Date("2026-02-18"),
+    },
+    {
+      title: "Acuerdo Financiación Festes 2026",
+      description: "Acuerdo sobre la financiación de las fiestas universitarias",
+      type: "acta",
+      category: "Junta Permanente",
+      fileSize: "1.1 MB",
+      publishedAt: new Date("2026-02-10"),
+    },
+    {
+      title: "Acta Comisión Económica Enero",
+      description: "Acta de la comisión económica de enero",
+      type: "acta",
+      category: "Comisión",
+      fileSize: "0.8 MB",
+      publishedAt: new Date("2026-01-25"),
+    },
+    {
+      title: "Resolución Becas Comedor",
+      description: "Resolución de la convocatoria de becas de comedor",
+      type: "resolución",
+      category: "Resolución",
+      fileSize: "1.5 MB",
+      publishedAt: new Date("2026-01-15"),
+    },
+    {
+      title: "Acta Pleno Extraordinario Diciembre",
+      description: "Acta del pleno extraordinario de diciembre",
+      type: "acta",
+      category: "Pleno",
+      fileSize: "3.2 MB",
+      publishedAt: new Date("2025-12-20"),
+    },
+    {
+      title: "Memoria Anual de Actividades 2025",
+      description: "Memoria completa de actividades del año 2025",
+      type: "memoria",
+      category: "Memoria",
+      fileSize: "15.4 MB",
+      publishedAt: new Date("2025-12-15"),
+    },
+    {
+      title: "Presupuesto Anual 2026",
+      description: "Presupuesto aprobado para el ejercicio 2026",
+      type: "presupuesto",
+      category: "Económico",
+      fileSize: "3.8 MB",
+      publishedAt: new Date("2026-01-01"),
+    },
+    {
+      title: "Presupuesto 2025",
+      description: "Presupuesto del ejercicio 2025",
+      type: "presupuesto",
+      category: "Económico",
+      fileSize: "3.5 MB",
+      publishedAt: new Date("2025-01-01"),
+    },
+    {
+      title: "Presupuesto 2024",
+      description: "Presupuesto del ejercicio 2024",
+      type: "presupuesto",
+      category: "Económico",
+      fileSize: "3.2 MB",
+      publishedAt: new Date("2024-01-01"),
+    },
+    {
+      title: "Informe Trimestral Q1 2026",
+      description: "Informe de ejecución presupuestaria del primer trimestre de 2026",
+      type: "informe",
+      category: "Económico",
+      fileSize: "2.1 MB",
+      publishedAt: new Date("2026-01-15"),
+    },
+    {
+      title: "Liquidación Anual 2025",
+      description: "Liquidación del presupuesto del año 2025",
+      type: "informe",
+      category: "Económico",
+      fileSize: "4.2 MB",
+      publishedAt: new Date("2026-01-10"),
+    },
+    {
+      title: "Convocatoria Pleno Ordinario Febrero",
+      description: "Convocatoria oficial del pleno ordinario de febrero",
+      type: "convocatoria",
+      category: "Convocatoria",
+      fileSize: "0.5 MB",
+      publishedAt: new Date("2026-02-18"),
+    },
+    {
+      title: "Elecciones a Delegados de Centro",
+      description: "Convocatoria de elecciones a delegados de centro",
+      type: "convocatoria",
+      category: "Electoral",
+      fileSize: "0.7 MB",
+      publishedAt: new Date("2026-02-10"),
+    },
+    {
+      title: "Asamblea General de Estudiantes",
+      description: "Convocatoria de la asamblea general de estudiantes",
+      type: "convocatoria",
+      category: "Reunión",
+      fileSize: "0.4 MB",
+      publishedAt: new Date("2026-02-05"),
+    },
+    {
+      title: "Estatutos de la UJI",
+      description: "La norma suprema de la Universitat Jaume I. Define la estructura, fines y gobierno de la institución.",
+      type: "normativa",
+      category: "Fundamental",
+      fileSize: "8.5 MB",
+    },
+    {
+      title: "Reglamento del Consell",
+      description: "Normativa interna que regula el funcionamiento del Consell de l'Estudiantat, sus órganos y elecciones.",
+      type: "normativa",
+      category: "Interna",
+      fileSize: "4.1 MB",
+    },
+    {
+      title: "Estatuto del Estudiante",
+      description: "Carta de derechos y deberes del estudiantado universitario a nivel estatal.",
+      type: "normativa",
+      category: "Derechos",
+      fileSize: "5.3 MB",
+    },
+    {
+      title: "Reglamento Electoral",
+      description: "Normas para la elección de delegados, claustrals y miembros de Junta.",
+      type: "normativa",
+      category: "Electoral",
+      fileSize: "2.9 MB",
+    },
+    {
+      title: "Normativa de Compensación",
+      description: "Regulación sobre la evaluación por compensación curricular.",
+      type: "normativa",
+      category: "Académica",
+      fileSize: "1.8 MB",
+    },
+    {
+      title: "Reglamento Económico",
+      description: "Gestión presupuestaria, ayudas y fiscalización de cuentas del Consell.",
+      type: "normativa",
+      category: "Económica",
+      fileSize: "3.4 MB",
+    },
+  ]);
+
+  await db.insert(services).values([
+    {
+      title: "Asesoría Jurídica",
+      description: "¿Problemas con la normativa? ¿Conflictos en la evaluación? Nuestro equipo legal te asesora gratuitamente.",
+      icon: "Scale",
+      color: "bg-purple-600",
+      order: 1,
+    },
+    {
+      title: "Banco de Apuntes",
+      description: "Accede a miles de apuntes compartidos por compañeros de tu grado. Colabora y gana recompensas.",
+      icon: "GraduationCap",
+      color: "bg-blue-500",
+      order: 2,
+    },
+    {
+      title: "Calculadora de Matrícula",
+      description: "Simula el coste de tu matrícula según créditos, becas y tasas administrativas.",
+      icon: "Calculator",
+      color: "bg-green-500",
+      order: 3,
+    },
+    {
+      title: "Buzón de Incidencias",
+      description: "Canal confidencial (Procedimiento Mistral) para comunicar problemas con profesorado o infraestructuras.",
+      icon: "MessagesSquare",
+      color: "bg-red-500",
+      order: 4,
+    },
+    {
+      title: "Voluntariado",
+      description: "Únete a programas de acción social, sostenibilidad y cooperación internacional.",
+      icon: "HeartHandshake",
+      color: "bg-orange-500",
+      order: 5,
+    },
+    {
+      title: "Bolsa de Alojamiento",
+      description: "Encuentra piso compartido o busca compañeros. Un servicio verificado por el Consell.",
+      icon: "Briefcase",
+      color: "bg-teal-600",
+      order: 6,
+    },
+  ]);
+
+  console.log("Database seeded successfully!");
+}
