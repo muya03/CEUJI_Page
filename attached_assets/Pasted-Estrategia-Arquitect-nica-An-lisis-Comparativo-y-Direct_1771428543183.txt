@@ -1,0 +1,176 @@
+Estrategia Arquitectónica, Análisis Comparativo y Directivas de Prompt Engineering para el Ecosistema Digital del Consell de l'Estudiantat de la UJI
+El panorama digital de las instituciones académicas se encuentra en un punto de inflexión donde la mera disposición de información estática ha dejado de ser suficiente para captar y retener la atención de la demografía universitaria. El presente informe exhaustivo aborda la reestructuración integral de la presencia web del Consell de l'Estudiantat de la Universitat Jaume I (UJI), evolucionando desde un repositorio tradicional hacia un ecosistema digital dinámico, modular y altamente persuasivo. La directriz principal exige la conceptualización de una landing page central moderna, desprovista temporalmente de integraciones complejas de backend o intranets, pero dotada de una profundidad informativa máxima mediante el uso de metodologías de diseño proyectadas para el bienio 2025-2026. Asimismo, la estrategia contempla la ramificación de la arquitectura de la información hacia dos ecosistemas satélites autónomos pero interconectados: la "Casa de l'Estudiantat" y el portal de eventos "Festes de les Paelles". A través de un análisis competitivo profundo, la auditoría del contenido actual de la UJI y la aplicación de tendencias UI/UX como las estructuras Bento Grid, el Glassmorphism y la tipografía cinética, se fundamenta la creación de un prompt maestro diseñado para dirigir a inteligencias artificiales generativas en la construcción de este nuevo paradigma web.
+Auditoría Arquitectónica y Despliegue de la Información del Consell de la UJI
+Para remodelar la interfaz digital, resulta imperativo comprender la densidad y la jerarquía de la información que el Consell de l'Estudiantat maneja en la actualidad. Como máximo órgano de representación y gobierno del estudiantado de la Universitat Jaume I, el Consell opera bajo principios inquebrantables de autonomía económica, autonomía de gestión de infraestructuras y autonomía competencial.1 Esta independencia funcional, garantizada frente a otros órganos de gobierno universitarios, genera un volumen masivo de documentación, normativas y actividades que deben ser orquestadas de manera intuitiva en el nuevo diseño.
+La complejidad estructural del Consell se divide en múltiples capas de representación institucional que el usuario debe poder navegar sin fricción. La gobernanza diaria recae sobre la Junta Permanente, presidida por la portavocía (actualmente ocupada por Mohamed Al Howaidi Nasralla) e integrada por la viceportavocía, la secretaría y la tesorería.1 Por encima de esta junta, en términos de amplitud representativa, se encuentra el Pleno del Consell, compuesto por veintisiete estudiantes que incluyen a quince miembros claustrales y doce representantes provenientes de los Consejos de Centro y el Consejo General de Estudios.1 Además, la red de representación se extiende hacia comisiones universitarias críticas, abarcando desde el Consejo de Gobierno hasta la Comisión de Igualdad, el Comité de Ética y Responsabilidad Social (CERSU), y la Comisión de Política Lingüística.1 En el plano operativo, la acción del Consell trasciende la burocracia para adentrarse en la formación continua, ofreciendo cursos de representación estudiantil convalidables por créditos ECTS y organizando encuentros de coordinación representativa.1
+Para evitar la saturación cognitiva del usuario ante este alud de datos estructurales, la información debe ser categorizada y presentada utilizando tablas comparativas y contenedores asimétricos en el diseño final. A continuación, se detalla la estructuración lógica de los servicios y actividades que la nueva interfaz deberá alojar, clasificados según su naturaleza funcional para facilitar la navegación del estudiante.
+
+Categoría Estratégica
+Componentes de Información Específicos a Integrar
+Objetivo de Experiencia de Usuario (UX)
+Gobernanza y Transparencia
+Estructura de la Junta Permanente, miembros del Pleno, normativas propias, acuerdos, convocatorias, información de elecciones a delegados/subdelegados.1
+Proyectar institucionalidad, confianza y facilitar el acceso a la burocracia estudiantil mediante un portal de transparencia sin clics innecesarios.
+Servicios y Apoyo al Estudiante
+Información sobre el Fondo Becas UJI (ayudas para estudiantes con problemas económicos sobrevenidos), premios, concursos de redacción, resoluciones de compensación.1
+Agrupar el soporte financiero y académico en un "Hub de Herramientas" de fácil acceso.
+Acción Social y Solidaridad
+Campañas del Día Internacional contra la LGTBIFÒBIA (reparto de pulseras, adhesivos), talleres de lengua de signos, recogidas solidarias de alimentos, eventos benéficos (8 de marzo).1
+Humanizar el consejo, mostrando su compromiso con los valores éticos y el tejido social mediante narrativas visuales de impacto.
+Ocio y Dinamización Cultural
+Setmana de Benvinguda (actuaciones de comedia, ferias de voluntariado, conciertos), convenios deportivos (entradas gratuitas para Bisontes Castellón), retransmisión de eventos deportivos.1
+Generar retención y tráfico recurrente en la web al posicionarla como el centro de la actualidad y el entretenimiento universitario.
+
+Esta vasta cantidad de información, que actualmente se encuentra dispersa en directorios profundos 1, será reestructurada en la landing page principal utilizando un enfoque de divulgación progresiva. Esto significa que el usuario será recibido con mensajes de alto impacto y llamadas a la acción (CTAs) claras, revelando los detalles organizativos únicamente a medida que interactúa con la plataforma.
+Análisis Competitivo UX/UI en la Representación Estudiantil Nacional
+La excelencia en el diseño web no ocurre en el vacío; requiere un estudio meticuloso del panorama competitivo. La observación de las estrategias digitales adoptadas por otros consejos de estudiantes e instituciones de representación universitaria en España proporciona directrices fundamentales sobre qué funcionalidades emular y qué errores arquitectónicos evitar en el ecosistema de la UJI.
+El Consell d'Estudiants de la Universitat Politècnica de València (CEUPV) representa un caso de éxito notable en la clarificación de herramientas de utilidad directa para el alumno.5 Su portal destaca por una categorización denominada "Herramientas", la cual encapsula recursos de alto valor añadido como simuladores de coste de matrícula, buscadores de becas y el "Procedimiento Mistral", un canal confidencial diseñado para comunicar incidencias docentes.5 Además, el CEUPV vitaliza su presencia institucional integrando un muro social que proyecta dinámicamente el contenido de su cuenta de Instagram, mostrando eventos culturales, huelgas académicas (paros académicos) y oportunidades profesionales.5 La lección extraída de la UPV es la necesidad de un diseño orientado al servicio, donde la política universitaria coexista armónicamente con la utilidad práctica diaria.
+Por su parte, el Consejo de Estudiantes de la Universidad Autónoma de Madrid (CEUAM) ofrece un modelo paradigmático en la segregación de la información institucional.6 Su arquitectura de cabecera separa de forma estricta la "Composición" (Mesa de Portavoces, Plenario) de la "Transparencia" (Normativas, Convocatorias, Asuntos Económicos).6 Esta dicotomía reduce el tiempo de búsqueda para el usuario que requiere documentos oficiales, un enfoque que la nueva web de la UJI deberá adoptar para su propio portal de transparencia y acuerdos del Pleno. De igual modo, el Consejo de Estudiantes de la Universidad de Zaragoza (CEUZ) brilla por su capacidad para contextualizar su labor dentro de un marco nacional e institucional más amplio.7 El CEUZ dedica espacios visuales prominentes a su representación externa en organismos como la CREUP (Coordinadora de Representantes de Estudiantes de Universidades Públicas) y el CEUNE (Consejo de Estudiantes Universitario del Estado), al tiempo que ofrece accesos directos iconográficos a servicios paralelos de la universidad, tales como atención a la diversidad y oficinas de sostenibilidad.7
+Sin embargo, el referente más determinante para la ambición de ramificación del proyecto de la UJI se encuentra en "Festes UdL", la marca promovida por el Consell de l'Estudiantat de la Universitat de Lleida.8 La UdL ha comprendido que un festival universitario no puede ser tratado simplemente como una subpágina corporativa. Han desarrollado un ecosistema propio basado en cinco pilares inquebrantables: calidad, inclusión, seguridad, sostenibilidad y proximidad.8 Su portal estructura magistralmente macroeventos como la Festa Major (celebrando su 30º aniversario), la Festa de Benvinguda, la Intercampus y la reciente PromoFARRA (un evento masivo para 5.400 personas con autobuses subvencionados y precios de barras asignados por titulaciones).8 La web de Festes UdL emplea contadores regresivos, galerías inmersivas, archivos históricos de vídeos (aftermovies) y un reconocimiento explícito a sus partners corporativos e institucionales.8 Este es el estándar arquitectónico que deberá replicarse y superarse para el portal satélite de las "Festes de les Paelles" de la UJI.
+Conceptualización del Paradigma de Diseño 2025-2026
+Para que la nueva web del Consell de l'Estudiantat transmita una sensación inequívoca de vanguardia tecnológica sin sacrificar la gravitas institucional, la implementación debe adherirse rigurosamente a las metodologías y tendencias de diseño proyectadas para los años 2025 y 2026.9 El diseño dejará atrás las plantillas rígidas y simétricas para abrazar una estética fundamentada en la expresividad tipográfica, el dinamismo espacial y la inteligencia emocional de las interfaces.
+Tipografía Cinética, Expresiva y Accesibilidad Inclusiva
+El uso del sistema tipográfico dictado por los requerimientos del proyecto —Montserrat como fuente principal y Archivo Black para acentos— se alinea perfectamente con la tendencia de la tipografía expresiva y cinética.9 La familia Montserrat, por su geometría limpia y legibilidad excepcional, soportará el peso de la información normativa y los bloques de texto extensos. En contraste, Archivo Black asumirá el protagonismo en los grandes titulares (Hero sections) y llamadas a la acción, creando una dicotomía visual entre la contundencia de las declaraciones de intenciones y la accesibilidad de la información detallada.9 En el entorno de 2026, el texto no es estático; la tipografía cinética utilizará micro-movimientos para revelarse progresivamente al hacer scroll, respondiendo a los gestos del usuario para crear una primera impresión memorable sin comprometer los estándares de rendimiento.12 Este enfoque dinámico debe complementarse con un diseño de "Accesibilidad Primero", asegurando que el fuerte contraste tipográfico y la navegación clara cumplan con los más altos estándares de inclusión, permitiendo el uso fluido de lectores de pantalla y navegación por teclado.14
+Asimetría Estructurada: El Dominio de los Bento Grids
+Para resolver el problema del exceso de información institucional —un mal endémico en las webs universitarias— el diseño adoptará la estructura de Bento Grids.9 Inspirado en las cajas de comida japonesas, este sistema permite organizar jerarquías visuales complejas mediante una cuadrícula asimétrica de compartimentos de distintos tamaños.11 En lugar de interminables listas de enlaces para la Junta Permanente, las comisiones y los servicios, el usuario interactuará con módulos visuales equilibrados. Un bloque grande puede contener la misión principal del consejo, flanqueado por bloques más pequeños que ofrezcan acceso inmediato a normativas, noticias recientes o simuladores de becas.1 El Bento Grid facilita el escaneo rápido de la información, transformando un organigrama burocrático en una experiencia visualmente estimulante e interactiva.15
+Glassmorphism, Materiales Translúcidos y Neo-Brutalismo Modular
+El Glassmorphism (efecto de cristal esmerilado) ha evolucionado de ser un mero experimento visual a convertirse en una herramienta funcional indispensable para establecer jerarquías en el diseño de interfaces.9 Al aplicar fondos sutilmente desenfocados y translúcidos a las barras de navegación (sticky headers) y a las tarjetas flotantes, se permite que el usuario mantenga el contexto de la página mientras se enfoca en elementos específicos.9 Esta técnica es especialmente efectiva cuando se combina con la paleta de colores requerida para el proyecto. Para el portal central, el Glassmorphism aportará elegancia. Sin embargo, para los satélites, especialmente el de las Festes de les Paelles, la tendencia mutará hacia un Neo-Brutalismo o estética Y2K contemporánea: colores más oscuros, contrastes agresivos, formas orgánicas o anti-retículas que rompen la uniformidad de la plantilla corporativa para realizar declaraciones visuales audaces.13
+Sistematización de la Identidad Cromática e Integración de Marca
+La paleta de colores proporcionada establece un espectro monocromático azulado que transmite seriedad institucional, confianza y modernidad técnica. La implementación de estos valores hexadecimales exige una sistematización estricta mediante tokens de diseño para garantizar la coherencia visual en todos los estados de los componentes.
+Variable de Token CSS
+Valor Hexadecimal
+Función y Aplicación Estratégica en la UI/UX
+--color-primary-dark
+#013764
+Superficies de máxima autoridad institucional. Fondos del pie de página (footer), encabezados principales con tipografía Archivo Black y botones de llamada a la acción primarios.
+--color-primary-base
+#215077
+Elementos estructurales de navegación, barras laterales y tarjetas de perfiles representativos (Junta Permanente).
+--color-secondary-dark
+#41698B
+Estados interactivos (hover y active) para botones y enlaces. Fondos para secciones de transición visual.
+--color-secondary-base
+#60829E
+Iconografía del sistema, separadores visuales, bordes de elementos formales y textos secundarios sobre fondos altamente contrastados.
+--color-accent-muted
+#809BB2
+Metadatos (fechas de noticias), elementos inactivos, marcadores de posición (placeholders) y bordes de las tarjetas del sistema Bento Grid.
+--color-surface-deep
+#A0B4C5
+Superposiciones (overlays) semitransparentes para modales, sombras bases para dotar de profundidad a los elementos flotantes.
+--color-surface-mid
+#C0CDD8
+Fondos de secciones alternas para evitar la fatiga visual en páginas de largo desplazamiento (scroll).
+--color-surface-light
+#DFE6EC
+Color de relleno para contenedores internos, fondos de tarjetas de servicios y bases para la aplicación del efecto Glassmorphism.
+--color-background-white
+#FEFEFE
+Espacio negativo absoluto. Fondo principal del lienzo de la página web y color de texto para asegurar la máxima legibilidad sobre los tonos oscuros primarios.
+
+La identidad visual se verá reforzada por la integración estratégica de los logotipos institucionales del Consell de l'Estudiantat (Imágenes 2, 3, 4) y las variaciones de su mascota oficial, el Dragón. Las representaciones del dragón volando con corona (Imágenes 5 y 6) son ideales para animaciones flotantes sutiles en la cabecera. Por otro lado, las variaciones del dragón abrazando un corazón (Imágenes 1 y 7) se destinarán a las secciones de Acción Social y Solidaridad, mientras que la versión festiva con gafas de sol y vaso (Imagen 8) se reserva como eje central del portal satélite de las Paellas.
+Arquitectura de la Landing Page Central: El Núcleo Representativo
+El núcleo del ecosistema será una Landing Page inmersiva, diseñada como una aplicación de página única (Single Page Application de comportamiento estático) que organice la complejidad del Consell mediante un recorrido narrativo descendente.
+Navegación Omnipresente (Glassmorphic Sticky Header): La barra superior debe flotar con un efecto de desenfoque, garantizando acceso constante a las secciones "El Consell", "Transparencia", "Servicios" y "Noticias". Crucialmente, incluirá integraciones visuales destacadas —posiblemente con insignias dinámicas— que actúen como vías de escape hacia los ecosistemas satélites (La Casa de l'Estudiantat y Festes de les Paelles).
+Hero Section de Impacto (Tipografía Cinética): El usuario aterriza sobre un lienzo dominado por la paleta #FEFEFE y #DFE6EC. Un enorme titular en Archivo Black declara la misión de representación estudiantil, apareciendo progresivamente. A su lado, la mascota del dragón (renderizada en SVG) levita mediante una micro-interacción suave. Botones de gran contraste en #013764 invitan a explorar los servicios o conocer a los representantes.
+El Órgano de Gobierno (Bento Grid Asimétrico): Esta sección consolida la burocracia en arte visual. Mediante un sistema de cuadrículas asimétricas, se expone la estructura jerárquica: una tarjeta prominente para la Junta Permanente, módulos colindantes para explicar la función del Pleno (27 representantes), y tarjetas con iconografía para las comisiones universitarias (Igualdad, Ética, Régimen Disciplinario).1 Los bordes redondeados y los fondos alternos (#C0CDD8 y #DFE6EC) previenen la fatiga visual.
+Bifurcación de Caminos (Callout Satélites): Una franja horizontal de alto impacto visual divide la página, presentando dos grandes contenedores interactivos. Uno invita a sumergirse en la comunidad física de la "Casa de l'Estudiantat"; el otro, adoptando súbitamente una estética vibrante y oscura, llama a la adquisición de entradas para las "Festes de les Paelles".
+Hub de Herramientas y Servicios (Tarjetas Dinámicas): Utilizando micro-movimientos (elementos que reaccionan a la proximidad del cursor 12), se presenta el catálogo de servicios: acceso al Fondo Becas UJI, información sobre cursos de representación estudiantil con créditos ECTS, campañas de solidaridad (Día LGTBIFÒBIA), y beneficios de ocio (entradas al Bisontes Castellón).1
+Portal de Transparencia (Acordeones Minimalistas): Las normativas propias, los acuerdos del Pleno y las convocatorias de elecciones a delegados se agrupan en un sistema de listas desplegables elegantes, manteniendo el entorno libre de desorden informativo.1
+Pie de Página (Footer Institucional): Un bloque masivo en color #013764 cierra la página. Contiene información vital de contacto (Edifici de l'estudiantat, consell@uji.es), enlaces rápidos a herramientas universitarias (Aula Virtual, SIA, Menú de cafeterías) y las conexiones a nivel estatal (CREUP).1
+Arquitectura de los Ecosistemas Satélites
+Aunque la directiva de programación inmediata se centra en la landing page, el diseño arquitectónico debe prever la lógica y el flujo de los dos dominios paralelos para asegurar una coherencia holística.
+Satélite A: "Casa de l'Estudiantat" (El Hub Comunitario Físico-Digital)
+La Casa de l'Estudiantat es un espacio físico dedicado a la vida universitaria, gestionado directamente por el Consell.4 Su equivalente digital no debe ser formal, sino extremadamente utilitario, operando como el "salón de estar" virtual de los alumnos de la UJI.
+La arquitectura de este satélite se fundamenta en la autogestión y el servicio diario. La sección principal debe integrar una agenda dinámica de actividades e informar sobre proyectos creados "por y para los estudiantes".4 Dos de los pilares lúdicos del recinto exigen interfaces dedicadas: la "Biblioteca de l'Estudiantat" y la "Campaña de Juegos de Mesa".1 Para la biblioteca, la interfaz debe explicar de forma visual el sistema de intercambio libre ("lleva un libro y llévate otro"), destacando las colecciones académicas, poemarios y novelas disponibles.1 Para los juegos de mesa, la plataforma debe mostrar las normativas de uso (restricción al recinto, reporte de roturas al correo consell@uji.es, y devolución al armario correspondiente).1
+Además, este portal servirá como un agregador de vida diaria, alojando el directorio del tejido asociativo de la UJI, información para el nuevo estudiantado y herramientas críticas para la rutina: menús de cafeterías, bolsa de alojamiento y horarios de autobuses urbanos e interurbanos.4 El diseño será limpio, luminoso (uso predominante de #FEFEFE y #DFE6EC) y altamente accesible desde dispositivos móviles.
+Satélite B: "Festes de les Paelles 2026" (Experiencia Inmersiva de Festival)
+La fiesta de las Paellas es un fenómeno de masas que congrega a más de 8.000 personas en el campus.1 En su edición de 2026, el evento adquiere un cariz histórico al celebrar el XXXV aniversario de la creación de la Universitat Jaume I.1 Este ecosistema exige una divergencia estética radical: abandona la paleta diurna en favor de un diseño Dark Mode con estética Neo-Brutalista, fuentes masivas e interacciones explosivas.13 La mascota del dragón en su versión festiva (Imagen 8) será el elemento conductor de la marca.
+La experiencia de usuario está diseñada como un embudo de conversión y seguridad. El Hero Section estará dominado por un contador regresivo de gran formato apuntando al viernes 27 de febrero de 2026, junto al cartel interactivo de actuaciones musicales y DJs.1 A nivel logístico, la plataforma debe integrar o enlazar fluidamente con la pasarela de pago de la aplicación IGLU (informando sobre los precios de donativo: entrada general 5€, opciones con paella 6€, suplemento paella gigante 1€) con plazos claramente delimitados hasta el 15 de febrero.1
+Una sección crítica del diseño se destinará a las infografías de control de accesos y normativas. Dada la magnitud del evento, la interfaz comunicará mediante bloques visuales contundentes la obligatoriedad de presentar el carnet digital a través de la App UJI y el DNI, advirtiendo sobre la prohibición estricta de reentrada y el veto a la introducción de líquidos.1 Finalmente, la web detallará la infraestructura de soporte, desplegando mapas interactivos que señalen la ubicación del Hospital de campaña, el Punto Violeta-Rainbow para incidentes LGTBIfóbicos o sexistas, y los horarios del transporte público reforzado (TRAM cada 6 minutos).1 Siguiendo el ejemplo del festival UdL 8, una galería inmersiva de ediciones pasadas y formularios de registro para los cocineros de paellas completarán este portal.
+Directivas Maestras de Prompt Engineering para el Despliegue de Inteligencia Artificial
+Para materializar esta compleja visión arquitectónica y estética en código funcional de alto nivel, se requiere una instrucción sistémica extremadamente detallada. El siguiente prompt ha sido estructurado meticulosamente para ser inyectado en asistentes de programación avanzados y generadores de interfaces (como Vercel v0, Cursor, Lovable o Claude Sonnet). Este comando encierra todas las restricciones semánticas, reglas de accesibilidad, configuraciones de diseño de 2026 y la inyección literal del contenido institucional investigado.
+Configuración del Sistema y Asignación de Rol:
+Actúa como un Principal Frontend Architect y Lead UI/UX Designer especializado en la creación de interfaces web modernas, escalables y de nivel corporativo. Tu misión es desarrollar el código fuente completo, reactivo y listo para producción de la nueva Landing Page institucional del "Consell de l'Estudiantat de la Universitat Jaume I (UJI)". Esta entidad es el órgano supremo de representación estudiantil de la universidad.
+Parámetros y Restricciones Arquitectónicas Inquebrantables:
+Exclusividad Frontend: Genera ÚNICAMENTE una arquitectura de interfaz de usuario de página única (Single Page Application - SPA). Tienes prohibida la creación de bases de datos, sistemas de autenticación, áreas privadas o intranets. Todo el contenido dinámico debe ser emulado mediante estados de React o estructuras de datos estáticas integradas en el código.
+Stack Tecnológico Requerido: Emplea React.js (con hooks funcionales), Tailwind CSS (para estilización utilitaria) y Framer Motion o librerías equivalentes (para animaciones complejas basadas en físicas de resorte y tipografía cinética).
+Localización e Idioma: El 100% del texto y copy generado debe estar en español/valenciano corporativo, reflejando un tono institucional pero accesible, juvenil y proactivo.
+Cumplimiento de Tendencias 2026: El diseño debe incorporar metodologías contemporáneas: estructuras asimétricas tipo Bento Grid, amplios espacios negativos, Glassmorphism (cristal esmerilado funcional) y micro-interacciones orgánicas al paso del cursor.
+Directivas Estrictas de Sistema de Diseño (Design Tokens):
+Debes configurar tu archivo de variables de entorno o la configuración de Tailwind CSS (tailwind.config.js lógico) utilizando exactamente la siguiente paleta hexadecimal obligatoria. La jerarquía de colores no es opcional:
+primary-dark: #013764 -> Utilizado para fondos de pie de página masivos, encabezados heroicos y botones CTA de máxima prioridad.
+primary-base: #215077 -> Utilizado para componentes de navegación y perfiles de directivos.
+secondary-dark: #41698B -> Empleado en estados :hover y gradientes de fondo dramáticos.
+secondary-base: #60829E -> Destinado a iconografía gruesa y divisores de sección.
+accent-muted: #809BB2 -> Para bordes de tarjetas Bento y metadatos sutiles.
+surface-deep: #A0B4C5 -> Sombras de gran elevación (box-shadow profundo).
+surface-mid: #C0CDD8 -> Fondos para bandas horizontales que rompan la monotonía del scroll.
+surface-light: #DFE6EC -> Fondos principales para tarjetas internas y modales.
+background-white: #FEFEFE -> El color base del lienzo (body) para máximo contraste.
+Reglas Tipográficas y de Accesibilidad (a11y):
+Importa fuentes desde Google Fonts.
+Establece la familia tipográfica Montserrat globalmente para el cuerpo del texto, descripciones, botones y metadatos.
+Reserva la familia tipográfica Archivo Black ESTRICTAMENTE para titulares enormes (H1, H2 en el Hero), declaraciones de impacto y números estadísticos masivos, creando un contraste visual de estilo neo-brutalista frente a la limpieza de Montserrat.
+Implementa atributos aria-label en todos los iconos interactivos y botones sin texto explícito. Asegura ratios de contraste WCAG nivel AA utilizando #FEFEFE sobre #013764 y viceversa.
+Estructura del Árbol de Componentes (DOM) e Inyección de Contenido Real:
+Debes escribir el código modular dividiendo la interfaz en las siguientes seis secciones secuenciales, inyectando los textos literales que te proporciono:
+1. NavbarComponent (Navegación Omnipresente):
+Estilo: Barra fija en la parte superior (sticky top-0 z-50). Debe utilizar Glassmorphism avanzado (bg-[#FEFEFE]/80 backdrop-blur-lg border-b border-/50).
+Contenido Izquierdo: Recrea un logo SVG minimalista texturizado usando las letras "UJI" y "Consell de l'Estudiantat" al lado de una silueta simplificada de un dragón (la mascota).
+Centro: Enlaces de anclaje con animación de subrayado al hover: "La Institución", "Transparencia", "Servicios al Estudiante".
+Derecha (Satélites CTA): Dos botones visualmente distintivos que simulen ser enlaces externos. Un botón claro (bg- text-[#013764]) que diga "🏛️ Casa de l'Estudiantat" y un botón vibrante o de borde oscuro que diga "🔥 Festes de les Paelles".
+2. HeroSection (Impacto y Tipografía Cinética):
+Comportamiento: El texto debe aparecer deslizándose desde abajo (fade-up con Framer Motion).
+Titular Central (Archivo Black, tamaño masivo): "TU VOZ. TU CONSELL. TU UNIVERSIDAD."
+Párrafo descriptivo (Montserrat): "Somos el máximo órgano de representación y gobierno del estudiantado de la Universitat Jaume I. Actuamos con total autonomía funcional, económica y organizativa para defender tus derechos y construir la vida universitaria que mereces."
+Visuales: Acompaña el texto con un elemento gráfico flotante. Dibuja un SVG abstracto con curvas fluidas (organic shapes) usando los colores #C0CDD8 y #60829E que lata o levite suavemente.
+3. BentoGridInstitution (Estructura Organizativa Asimétrica):
+Diseño: Crea un CSS Grid asimétrico (estilo Bento Box) con espacios amplios (gap-6). Las tarjetas deben tener fondo #FEFEFE, esquinas muy redondeadas (rounded-3xl), un borde sutil en #DFE6EC y una sombra suave de elevación.
+Inyección de Datos Reales:
+Caja Alpha (Ancha, colspan-2): Título "Junta Permanente". Texto: "El órgano de gestión y ejecución diaria." Muestra una lista elegante de cargos: Portavoz (Mohamed Al Howaidi Nasralla), Viceportavoz, Secretaría y Tesorería.
+Caja Beta (Alta, rowspan-2): Título "El Pleno". Gran número en Archivo Black: "27". Texto inferior: "Representantes estudiantiles (15 claustrales y 12 representantes de centros). El máximo foro de debate y toma de decisiones democráticas."
+Caja Gamma (Cuadrada): Título "Comisiones Universitarias". Texto: "Nuestra voz resuena en el Consejo de Gobierno, la Comisión de Igualdad, el Comité de Ética (CERSU), Régimen Disciplinario y Política Lingüística."
+Caja Delta (Rectangular): Título "Autonomía Total". Iconografía que represente tres pilares: Independencia Económica, Gestión de Infraestructuras y Competencia Institucional.
+4. ServicesCarousel (Herramientas y Dinamización Estudiantil):
+Diseño: Un contenedor horizontal interactivo o un mosaico dinámico de tarjetas que reaccionen al pasar el ratón (levantándose e iluminando el borde con #41698B).
+Inyección de Datos Reales:
+Tarjeta 1: "Formación de Líderes". Subtítulo: "Cursos de representación convalidables por créditos ECTS y Trobadas de coordinación."
+Tarjeta 2: "Acción y Compromiso Social". Subtítulo: "Campañas #STOPLGTBIFÒBIA, talleres de inmersión en Lengua de Signos y recogidas solidarias permanentes."
+Tarjeta 3: "Soporte Económico". Subtítulo: "Gestión directa del Fondo Becas UJI para mitigar dificultades económicas sobrevenidas."
+Tarjeta 4: "Cultura y Deporte". Subtítulo: "Entradas gratuitas para el Club Bisontes Castellón, eventos del 8 de Marzo y torneos en la Setmana de Benvinguda."
+5. TransparencyPortal (Diseño Limpio y Acceso Burocrático):
+Diseño: Implementa un componente de Acordeón (Accordion) extremadamente minimalista y fluido. Fondos en #DFE6EC que se expanden para mostrar el contenido.
+Inyección de Datos:
+"Normativas y Reglamentos" -> "Consulta la reglamentación propia que rige nuestra autonomía."
+"Acuerdos del Pleno" -> "Transparencia absoluta sobre los presupuestos, actas y resoluciones aprobadas."
+"Convocatorias Electorales" -> "Participa en las elecciones anuales a delegados y subdelegados de clase de todos los centros (FCJE, ESTCE, FCS, FCHS)."
+6. MegaFooter (Cierre Institucional):
+Diseño: Fondo sólido en #013764, texto principal en #FEFEFE, y enlaces secundarios en #A0B4C5. Organizado en cuatro columnas.
+Datos a inyectar:
+Contacto: Correo oficial (consell@uji.es), Pleno (pleconsell@uji.es), Teléfono (+34 964 72 80 00).
+Ubicación Física: Edifici de l'estudiantat, Ágora Universitaria, Campus del Riu Sec E2 - 12071, Castelló de la Plana.
+Enlaces Rápidos Externos: "SIA", "Aula Virtual", "Menú Cafeterías", "CREUP (Coordinadora Estatal)".
+Un copyright centrado inferior: "© 2026 Consell de l'Estudiantat de la Universitat Jaume I. Todos los derechos reservados."
+Instrucción Final de Despliegue Code-Base:
+No me proporciones pseudocódigo, resúmenes o esqueletos vacíos. Tu respuesta debe ser el código funcional completo, rico en clases utilitarias de Tailwind, con todos los componentes descritos orquestados en un App.jsx o equivalente, asegurando un diseño final de calidad de agencia digital de clase mundial, listo para visualización directa.
+La implementación meticulosa de este estudio arquitectónico y de su directiva algorítmica asegurará que el Consell de l'Estudiantat de la UJI no solo posea una página web, sino un mecanismo digital de representación persuasivo, eficiente y preparado para las expectativas interactivas de las generaciones futuras.
+Obras citadas
+Activitats del Consell de l'Estudiantat - UJI, fecha de acceso: febrero 18, 2026, https://www.uji.es/organs/ocag/estudiantat/base/activitats/
+Universitat Jaume I. Fondo becas UJI - Proyectos y actividades científicas de interés social - Generalitat Valenciana, fecha de acceso: febrero 18, 2026, https://mecenatge.gva.es/es/projectes-i-activitats-cientifiques-d-interes-social-a-la-nostra-comunitat/-/asset_publisher/172tMyBqeWmq/content/universitat-jaume-i-fons-beques-uji
+La UJI presenta su plan de becas para 2026: centraliza todas las convocatorias en un nuevo portal web | Castellón Plaza, fecha de acceso: febrero 18, 2026, https://castellonplaza.com/castellonplaza/castellon9/la-uji-presenta-su-plan-de-becas-para-2026-centraliza-todas-las-convocatorias-en-un-nuevo-portal-web
+Casa de l'Estudiantat - Universitat Jaume I, fecha de acceso: febrero 18, 2026, https://www.uji.es/organs/ocag/estudiantat/base/casadelestudiantat/
+Inicio - Consell d'Estudiants de la UPV, fecha de acceso: febrero 18, 2026, https://ceupv.es
+CEUAM - Consejo de Estudiantes UAM, fecha de acceso: febrero 18, 2026, https://ceuam.es
+Consejo de Estudiantes de la Universidad de Zaragoza ..., fecha de acceso: febrero 18, 2026, https://ceuz.unizar.es
+Festes UdL by CEUdL - ce-intranet udl, fecha de acceso: febrero 18, 2026, https://estudiantat.udl.cat/ca/ce/festesudl/
+The top web design trends of 2026, fecha de acceso: febrero 18, 2026, https://www.haddingtoncreative.com/post/the-top-web-design-trends-of-2026
+Tendencias en diseño web de 2026: 5 ejemplos para inspirarte - Squarespace, fecha de acceso: febrero 18, 2026, https://es.squarespace.com/blog/tendencias-en-diseno-web
+UX UI Design Trend for 2026 - Medium, fecha de acceso: febrero 18, 2026, https://medium.com/@digitalaspira/ux-ui-design-trend-for-2026-99d874b2abe2
+20 Top Web Design Trends 2026 | TheeDigital, fecha de acceso: febrero 18, 2026, https://www.theedigital.com/blog/web-design-trends
+10 Website Design Trends 2026: Build Modern Sites Without Code | Lovable, fecha de acceso: febrero 18, 2026, https://lovable.dev/guides/website-design-trends-2026
+2026 Web Design Trends You Need to Know - Showit, fecha de acceso: febrero 18, 2026, https://showit.com/business-growth/2026-web-design-trends-you-need-to-know/
+Top 2026 Web Design Trends - YouTube, fecha de acceso: febrero 18, 2026, https://www.youtube.com/watch?v=DQOCFw_23FI
+The 11 Biggest Web Design Trends of 2026 - Wix.com, fecha de acceso: febrero 18, 2026, https://www.wix.com/blog/web-design-trends
+8 Web Design Trends 2026 | VistaPrint US, fecha de acceso: febrero 18, 2026, https://99designs.com/blog/trends/web-design-trends/
+Festa de les paelles - UJI, fecha de acceso: febrero 18, 2026, https://www.uji.es/com/reportatges/feb14/aniversari-uji/paelles/
